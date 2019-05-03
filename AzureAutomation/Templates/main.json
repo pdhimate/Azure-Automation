@@ -2,10 +2,30 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "resourceConfigs": {
+      "type": "object"
+    },
+    "_artifactsLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "The base URI for the Storage Container . E.g. URL of a container blob"
+      }
+    },
+    "_artifactsLocationSasToken": {
+      "type": "string",
+      "metadata": {
+        "description": "SAS token for the storage Container url. E.g. SAS token for a container blob"
+      }
+    },
+    "tenantId": {
+      "type": "string"
+    }
   },
   "variables": {
+    "nestedTemplatesFolder": "nested"
   },
   "resources": [
+    
   ],
   "outputs": {
   }

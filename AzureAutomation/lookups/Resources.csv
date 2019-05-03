@@ -1,0 +1,4 @@
+﻿Name,Short Code,Name Max Char Limit
+Virtual Network,vn,63
+Resource Group,rg,64
+Storage Account,stga,24

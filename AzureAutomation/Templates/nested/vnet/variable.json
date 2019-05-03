@@ -1,0 +1,7 @@
+﻿{
+  "Name": "[parameters('resourceConfigs').vnet.name]",
+  "Subnet1Name": "Subnet-1",
+  "Subnet1Service": "Microsoft.AzureCosmosDB",
+  "Subnet2Name": "Subnet-2",
+  "Subnet2Service": "Microsoft.KeyVault"
+}

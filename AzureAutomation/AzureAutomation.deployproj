@@ -26,13 +26,21 @@
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
-    <None Include="Lookups\ResourceTypes.csv" />
+    <None Include="lookups\Resources.csv" />
+    <None Include="Modules\AzureAutomation.Utilities\AzureAutomation.Utilities.psd1" />
+    <None Include="Modules\AzureAutomation.Utilities\AzureAutomation.Utilities.psm1" />
+    <None Include="Modules\AzureAutomation.Deployments\AzureAutomation.Deployments.psd1" />
+    <None Include="Modules\AzureAutomation.Deployments\AzureAutomation.Deployments.psm1" />
+    <None Include="Modules\AzureAutomation.Common\AzureAutomation.Common.psm1" />
+    <None Include="Modules\AzureAutomation.Common\AzureAutomation.Common.psd1" />
     <None Include="Modules\AzureAutomation.Common\CommonConstants.ps1" />
+    <None Include="Scripts\AzureDevOps\StoreTemplateAndLookupFiles.ps1" />
     <None Include="Scripts\Deploy.ps1" />
-    <None Include="Templates\main.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Templates\Nested\" />
+    <None Include="Scripts\Local\StoreTemplateAndLookupFiles.ps1" />
+    <None Include="templates\main.json" />
+    <None Include="templates\nested\vnet\link.json" />
+    <None Include="templates\nested\vnet\template.json" />
+    <None Include="templates\nested\vnet\variable.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

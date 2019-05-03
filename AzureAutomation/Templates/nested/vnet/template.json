@@ -1,0 +1,117 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vnetConfig": {
+      "type": "object",
+      "metadata": {
+        "Description": "The config of the virtual network containing Name, SubNet1Name Subnet2Name, Subnet1Service etc."
+      }
+    }
+  },
+  "variables": {
+    "vnetName": "[parameters('vnetConfig').Name]",
+    "vnetLocation": "[resourceGroup().location]",
+    "vnetPrefix": "10.0.0.0/16",
+    "vnetSubnet1Name": "[parameters('vnetConfig').Subnet1Name]",
+    "vnetSubnet1Prefix": "10.0.0.0/24",
+    "vnetSubnet1Service": "[parameters('vnetConfig').Subnet1Service]",
+    "vnetSubnet2Name": "[parameters('vnetConfig').Subnet2Name]",
+    "vnetSubnet2Prefix": "10.0.1.0/24",
+    "vnetSubnet2Service": "[parameters('vnetConfig').Subnet2Service]"
+  },
+  "resources": [
+    {
+      "apiVersion": "2018-08-01",
+      "dependsOn": [],
+      "location": "[variables('vnetLocation')]",
+      "name": "[variables('vnetName')]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "[variables('vnetPrefix')]"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "[variables('vnetSubnet1Name')]",
+            "properties": {
+              "addressPrefix": "[variables('vnetSubnet1Prefix')]",
+              "serviceEndpoints": [
+                {
+                  "service": "[variables('vnetSubnet1Service')]",
+                  "locations": [
+                    "*"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "name": "[variables('vnetSubnet2Name')]",
+            "properties": {
+              "addressPrefix": "[variables('vnetSubnet2Prefix')]",
+              "serviceEndpoints": [
+                {
+                  "service": "[variables('vnetSubnet2Service')]",
+                  "locations": [
+                    "*"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "resources": [
+        {
+          "apiVersion": "2018-08-01",
+          "dependsOn": [
+            "[variables('vnetName')]"
+          ],
+          "name": "[concat(variables('vnetName'), '/', variables('vnetSubnet1Name'))]",
+          "properties": {
+            "addressPrefix": "10.0.0.0/24",
+            "serviceEndpoints": [
+              {
+                "service": "[variables('vnetSubnet1Service')]",
+                "locations": [
+                  "*"
+                ]
+              }
+            ],
+            "delegations": []
+          },
+          "scale": null,
+          "type": "Microsoft.Network/virtualNetworks/subnets"
+        },
+        {
+          "apiVersion": "2018-08-01",
+          "dependsOn": [
+            "[variables('vnetName')]"
+          ],
+          "name": "[concat(variables('vnetName'), '/', variables('vnetSubnet2Name'))]",
+          "properties": {
+            "addressPrefix": "10.0.1.0/24",
+            "serviceEndpoints": [
+              {
+                "service": "[variables('vnetSubnet2Service')]",
+                "locations": [
+                  "*"
+                ]
+              }
+            ],
+            "delegations": []
+          },
+          "scale": null,
+          "type": "Microsoft.Network/virtualNetworks/subnets"
+        }
+      ],
+      "tags": {
+        "displayName": "variables('vnetName')"
+      },
+      "type": "Microsoft.Network/virtualNetworks"
+    }
+  ],
+  "outputs": {}
+}

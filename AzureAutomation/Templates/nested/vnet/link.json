@@ -1,0 +1,18 @@
+﻿{
+  "name": "[variables('vnetConfig').Name]",
+  "type": "Microsoft.Resources/deployments",
+  "apiVersion": "2017-05-10",
+  "dependsOn": [],
+  "properties": {
+    "mode": "Incremental",
+    "templateLink": {
+      "uri": "[concat(parameters('_artifactsLocation'), '/', variables('nestedTemplatesFolder'), '/vnet/template.json', parameters('_artifactsLocationSasToken'))]",
+      "contentVersion": "1.0.0.0"
+    },
+    "parameters": {
+      "vnetConfig": {
+        "value": "[variables('vnetConfig')]"
+      }
+    }
+  }
+}
