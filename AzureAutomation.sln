@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "AzureAutomation", "AzureAutomation\AzureAutomation.deployproj", "{ACC2B9D5-C2D8-416A-8527-2F68F04CD76F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACC2B9D5-C2D8-416A-8527-2F68F04CD76F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC2B9D5-C2D8-416A-8527-2F68F04CD76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC2B9D5-C2D8-416A-8527-2F68F04CD76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC2B9D5-C2D8-416A-8527-2F68F04CD76F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF6D27AD-AF82-4CA0-BB72-993794DAC8B2}
+	EndGlobalSection
+EndGlobal
