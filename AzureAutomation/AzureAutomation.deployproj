@@ -27,6 +27,9 @@
       <Visible>False</Visible>
     </None>
     <None Include="lookups\Resources.csv" />
+    <None Include="Modules\AzureAutomation.Common.zip" />
+    <None Include="Modules\AzureAutomation.Deployments.zip" />
+    <None Include="Modules\AzureAutomation.Utilities.zip" />
     <None Include="Modules\AzureAutomation.Utilities\AzureAutomation.Utilities.psd1" />
     <None Include="Modules\AzureAutomation.Utilities\AzureAutomation.Utilities.psm1" />
     <None Include="Modules\AzureAutomation.Deployments\AzureAutomation.Deployments.psd1" />
