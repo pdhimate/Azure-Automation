@@ -20,4 +20,4 @@ To host the framework on Azure:
 You can now run the runbook with the required parameters to deploy the resource.
 
 ## Supported Resources list
-- Virtual network [template](https://github.com/pdhimate/Azure-Automation/blob/master/AzureAutomation/Templates/nested/vnet/template.json)
+- Virtual network [[Template link]](https://github.com/pdhimate/Azure-Automation/blob/master/AzureAutomation/Templates/nested/vnet/template.json)
