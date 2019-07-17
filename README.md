@@ -28,7 +28,7 @@ You can now run the runbook with the required parameters to deploy the resource.
 1. Create a **template.json** file for your resource, which would contain the ARM template for your resource. 
 2. Create a **link.json** file which would contain the nested template link which would eventually be inserted in the main template's resources section by the Deploy Script.
 3. Create a **variable.json** file which would contain all the vairables being passed to the nested template from the main template.
-4. Create a new folder for your resource say **cosmosdb** (small case, no space), add the 3 files created above in it and add the fodler under the [nested templates folder](https://github.com/pdhimate/Azure-Automation/blob/master/AzureAutomation/Templates/nested)
+4. Create a new folder for your resource say **cosmosdb** (small case, no space), add the 3 files created above in it and add the folder under the [nested templates folder](https://github.com/pdhimate/Azure-Automation/blob/master/AzureAutomation/Templates/nested)
 
 ### Step 2: Update lookups
 Goto the [lookups/Resources.csv](https://github.com/pdhimate/Azure-Automation/blob/master/AzureAutomation/lookups/Resources.csv) file and add a new entry for you resource, say *Cosmos Db, cdb, 63*, for name, short code and max charater limit (azure's limit for maximum length of the name)
