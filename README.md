@@ -6,3 +6,4 @@ An automation framework built using Powershell and ARM templates to automate dep
 - Separate template for each resource (or groups of resources)
 - Dynamically created main template depeding on the resources selected to deploy.
 - Separate module to contain scriptsused commonly
+- InScript provision to run the script in an Azure Runbook or on local Powershell
