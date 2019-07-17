@@ -1,7 +1,7 @@
-# Azure-Automation
-An automation framework biult using Powershell and ARM templates to automate deployments to Azure.
+# Azure Automation
+An automation framework built using Powershell and ARM templates to automate deployments to Azure.
 
-# Features
+## Features
 - Custom, unique naming convention for each delpoyed resource
 - Separate templatesfor each resource (or groups of resources)
 - Dynamically created main template depeding on the resources selected to deploy.
