@@ -16,3 +16,8 @@ To host the framework on Azure:
     * Ensure that you have set the **$ExecutionEnvironment** variable to **Runbook**
     * Ensure that you have set the **$StorageAccountName** variable to the Storage Account name used in step 1.
 3. Assign appropriate permissions for the Runbook to be able to deploy resources in the target azure subscription. 
+
+You can now run the runbook with the required parameters to deploy the resource.
+
+## Supported Resources list
+- Virtual network [template](https://github.com/pdhimate/Azure-Automation/blob/master/AzureAutomation/Templates/nested/vnet/template.json)
